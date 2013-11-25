@@ -2,3 +2,7 @@ polilimnio_website
 ==================
 
 polilimnio.com is a website made for "The Polilimnio". Α popular Messenia Region attraction. A lovely spot with waterfalls and small ponds, ideal for a cool and refreshing break during the Holidays at Peloponnese
+
+technologies used
+=================
+polilimnio.com is developed using AngularJS by Google.
