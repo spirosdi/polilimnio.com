@@ -1,6 +1,9 @@
 [
     {
-        "id": "facebook",
-        "name": "facebook"
+        "id": "facebook"
+
+    },
+    {
+        "id": "flickr"
     }
 ]

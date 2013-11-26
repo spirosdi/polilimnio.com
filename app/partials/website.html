@@ -1,0 +1,6 @@
+<p>this is a view where data is fetched from a single website</p>
+<ul class="photos">
+    <li ng-repeat="photo in photoUrls" class="">
+        <img ng-src="{{photo.sizes.size[6].source}}"/>
+    </li>
+</ul>
