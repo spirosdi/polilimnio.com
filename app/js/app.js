@@ -5,6 +5,7 @@ var searchText = 'polilimnio';
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
         'ngRoute',
+        'ngAnimate',
         'myApp.filters',
         'myApp.services',
         'myApp.directives',

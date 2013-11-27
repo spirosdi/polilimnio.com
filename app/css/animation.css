@@ -1,0 +1,13 @@
+/*
+  We're using CSS transitions for when
+  the enter and move events are triggered
+  for the element that has the .repeated-item
+  class
+*/
+.repeated-item.ng-enter{
+    opacity: 0;
+    -webkit-animation:1s rollIn;
+    -moz-animation:2s my_animation;
+    -o-animation:2s my_animation;
+    animation:1s rollIn;
+}
