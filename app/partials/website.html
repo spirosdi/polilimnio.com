@@ -1,5 +1,12 @@
 <a href back-button>back</a>
 <p>this is a view where data is fetched from a single website</p>
-<ul class="photos">
-        <img ng-repeat="photo in photoUrls" class="repeated-item"  ng-src="{{photo.sizes.size[6].source}}"/>
-</ul>
+<div class="photos" when-scrolled="loadMore()">
+        <img ng-repeat="photo in photoUrls" class="repeated-item"  ng-src="{{photo.sizes.size[5].source}}"/>
+
+        <ul class="spinner" ng-show="loading">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+</div>

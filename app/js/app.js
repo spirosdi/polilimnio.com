@@ -16,6 +16,6 @@ angular.module('myApp', [
         $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
         $routeProvider.when('/listWebsites', {templateUrl: 'partials/listWebsites.html', controller: 'ListWebsitesCtrl'});
         $routeProvider.when('/website/:websiteId', {templateUrl: 'partials/website.html', controller: 'WebsiteCtrl'});
-        $routeProvider.otherwise({redirectTo: '/listWebsites'});
+        $routeProvider.otherwise({redirectTo: '/website/flickr'});
     }]);
 
