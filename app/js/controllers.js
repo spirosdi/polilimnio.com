@@ -14,6 +14,12 @@ angular.module('myApp.controllers', []).
     }])
     /*controller of Website view*/
     .controller('WebsiteCtrl', ['$scope','$routeParams', '$http','$window',function($scope, $routeParams, $http, $window) {
+
+
+
+        $scope.searchText = 'polilimnio';
+
+        $scope.update = function() {
         var pageNum=1;
         var urlListPhotos='';
         var urlPhoto='';
@@ -24,8 +30,10 @@ angular.module('myApp.controllers', []).
             if($scope.loading==false){
                 pageNum++;
                 console.log('load more');
+                console.log($scope.searchText);
+
                 $scope.loading=true;
-                $http.get(urlListPhotos+$window.searchText, {params: {page:pageNum}}).success(function(data) {
+                $http.get(urlListPhotos+$scope.searchText, {params: {page:pageNum}}).success(function(data) {
 
                     switch($routeParams.websiteId)
                     {
@@ -70,7 +78,7 @@ angular.module('myApp.controllers', []).
             urlListPhotos = localWebsiteData[0].urlListPhotos;
             urlPhoto = localWebsiteData[0].urlPhoto;
 
-            $http.get(urlListPhotos+$window.searchText, {params: {page:pageNum}}).success(function(data) {
+            $http.get(urlListPhotos+$scope.searchText, {params: {page:pageNum}}).success(function(data) {
                 switch($routeParams.websiteId)
                 {
                     case 'flickr':
@@ -84,5 +92,5 @@ angular.module('myApp.controllers', []).
                     $scope.loading=false;
                 });
         });
-
+        }
     }]);
