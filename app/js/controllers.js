@@ -16,10 +16,13 @@ angular.module('myApp.controllers', []).
     .controller('WebsiteCtrl', ['$scope','$routeParams', '$http','$window',function($scope, $routeParams, $http, $window) {
 
 
-
+        $scope.show=true;
         $scope.searchText = 'polilimnio';
-
+        $scope.showSearch = function() {
+            $scope.show=true;
+        }
         $scope.update = function() {
+            $scope.show=false;
         var pageNum=1;
         var urlListPhotos='';
         var urlPhoto='';

@@ -37,6 +37,22 @@ html, body, .dynamicContainer {
     overflow: auto;
 }
 
+.dynamicContainer {
+    position: relative;
+}
+
+.searchContainer {
+    width: 400px;
+    text-align: center;
+    height: 50px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+
 /*loading indicator*/
 .spinner {
     /* Size and position */

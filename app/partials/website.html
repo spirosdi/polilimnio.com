@@ -1,14 +1,16 @@
 <!--<a href back-button>back</a>
 <p>this is a view where data is fetched from a single website</p>-->
+<div ng-show="show" class="animate-show">
+    <input id="searchText" ng-value="polilimnio" ng-model="searchText"/>
+    <input ng-value="'search for ' + searchText" type="button" ng-click="update()"/>
+</div>
+<div ng-click="showSearch()" ng-show="!show">search another</div>
 <div class="photos" when-scrolled="loadMore()">
-        <input id="searchText" ng-value="polilimnio" ng-model="searchText"/>
-        <input ng-value="'search for ' + searchText" type="button" ng-click="update()"/>
-        <img  ng-repeat="photo in photoUrls" class="repeated-item"  ng-src="{{photo.sizes.size[5].source}}"/>
-
-        <ul class="spinner" ng-show="loading">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <img  ng-repeat="photo in photoUrls" class="repeated-item"  ng-src="{{photo.sizes.size[5].source}}"/>
+    <ul class="spinner" ng-show="loading">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </div>
